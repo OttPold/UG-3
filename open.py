@@ -49,8 +49,9 @@ print(get_products(products))
 
 product_id = int(input("Choose a product (0-10):"))
 product = get_product_by_id(products, product_id)
+product_info = f"{product['name']} \t {product['desc']} \t {locale.currency(product['price'], grouping=True)}"
 if product:
-    print(f"Product found: {product}")
+    print(f"Product found: {product_info}")
 else:
     print("Product not found")
 
